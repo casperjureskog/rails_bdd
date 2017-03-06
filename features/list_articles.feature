@@ -1,6 +1,6 @@
 Feature: List articles on landing page
   As a visitor,
-  when I visit the application's landing page,
+  when I visit the application's article page,
   I would like to see a list of articles
 
   Background:
@@ -10,7 +10,7 @@ Feature: List articles on landing page
       | Learn Rails 5        | Build awesome rails applications   |
 
   Scenario: Viewing list of articles on application's landing page
-    Given I am on the landing page
+    Given I am on the article page
     Then I should see "A breaking news item"
     And I should see "Some really breaking action"
     And I should see "Learn Rails 5"

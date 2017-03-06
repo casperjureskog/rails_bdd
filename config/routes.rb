@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'landing/index'
+  get 'article/index'
+  get '/posts/new' => 'posts#new', as: 'new_post'
+  # resources :posts
+  # root 'posts#index'
+  root controller: :article, action: :index
 
-  root controller: :landing, action: :index
 end
