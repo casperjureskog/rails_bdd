@@ -1,4 +1,4 @@
-When(/^I am on the article page$/) do
+When(/^I am on the landing page$/) do
   visit root_path
 end
 
