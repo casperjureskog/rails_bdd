@@ -10,5 +10,18 @@ Given(/^the following articles exists$/) do |table|
   table.hashes.each do |hash|
     Article.create!(hash)
   end
-
 end
+
+Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |title, content|
+  fill_in 'title', with: 'content'
+end
+
+
+Then /^I click add$/ do
+  click_link_or_button 'add'
+end
+
+When(/^I visit the writer site$/) do
+  visit new_post_path
+end
+
