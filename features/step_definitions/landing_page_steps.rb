@@ -18,9 +18,6 @@ Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |title, content|
 end
 
 
-Then /^I click add$/ do
-  click_link_or_button 'add'
-end
 
 When(/^I visit the writer site$/) do
   visit new_post_path
@@ -32,9 +29,7 @@ When(/^I visit the site$/) do
 end
 
 
-When(/^i click on link "([^"]*)"$/) do |arg1|
-  click_link_or_button arg1
-end
+
 
 Then(/^show me the page$/) do
   save_and_open_page

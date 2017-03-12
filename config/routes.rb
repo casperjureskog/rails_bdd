@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   post '/articles' => 'articles#create'
   get '/articles/new' => 'articles#new', as: 'new_post'
 
-  resources :articles
+  resources :articles do
+    resources :comment
+  end
   root controller: :landing, action: :index
-  get '/landing/:id' => 'landing#show', as: 'post'
+  get '/articles/comment/:id' => 'comment#show', as: 'post'
 end

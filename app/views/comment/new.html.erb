@@ -4,7 +4,7 @@
 </ul>
 <h1>new test</h1>
 
-<%= form_for(@articles) do |f| %>
+<%= form_for(@articles , @comment) do |f| %>
     <div>
       <%= f.label :email %>
       <%= f.text_field :email %>
@@ -16,6 +16,6 @@
     </div>
 
     <div>
-      <%= f.submit "submitt" %>
+      <%= f.submit "comment" %>
     </div>
 <% end %>
