@@ -13,8 +13,8 @@ Given(/^the following articles exists$/) do |table|
 end
 
 Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |title, content|
-  fill_in 'Title', with: title
-  fill_in 'Content', with: content
+  fill_in title , with: content
+  fill_in title , with: content
 end
 
 

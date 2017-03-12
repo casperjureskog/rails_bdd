@@ -11,9 +11,9 @@ Feature: As a visitor
 
   Scenario:
     Given I am on the landing page
-    Then show me the page
     And I click "A breaking news item"
-    And I fill in "email" with "email"
-    And I fill in "content" with "comment"
+
+    And I fill in "Email" with "email"
+    And I fill in "Comment" with "comment"
     And I click "comment"
     Then I should see "comment"
