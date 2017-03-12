@@ -1,4 +1,21 @@
 <ul>
-    <li><%= post.title %></li>
-    <li><%= post.content %></li>
+    <li><%= @articles.title %></li>
+    <li><%= @articles.content %></li>
 </ul>
+<h1>new test</h1>
+
+<%= form_for(@articles) do |f| %>
+    <div>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+
+    <div>
+      <%= f.label :comment %>
+      <%= f.text_area :comment %>
+    </div>
+
+    <div>
+      <%= f.submit "submitt" %>
+    </div>
+<% end %>

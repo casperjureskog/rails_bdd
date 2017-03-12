@@ -1,8 +1,10 @@
 <ul>
   <% @articles.each do |article| %>
       <li>
-        <%= article.title %><br />
-        <%= article.content %>
+        <%= link_to article.title, post_path(article)%><br />
+      <li>
+        <%= article.content %><br />
+      </li>
       </li>
   <% end %>
 </ul>
