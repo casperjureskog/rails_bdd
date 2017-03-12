@@ -19,3 +19,11 @@
       <%= f.submit "comment" %>
     </div>
 <% end %>
+<% if @articles.comments %>
+<h3>Comments</h3>
+<% @articles.comments.each do |content| %>
+<ul>
+  <li><%= content.comment %></li>
+</ul>
+<% end %>
+<% end %>

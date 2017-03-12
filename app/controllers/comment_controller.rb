@@ -7,12 +7,14 @@ class CommentController < ApplicationController
   def new
     @articles = Article.find(params[:article_id])
     @comments = Comment.new(article: @articles)
+
   end
 
   def create
-    binding.pry
-    @articles = Article.find(params[:article_id])
-    @comments = Comment.new(article: @articles, names: params[:comment][:email][:commit])
+    @nisse = params[:comment][:comment]
+    @articles = Article.find(params[:format])
+    @comments = Comment.new(article: @articles, comment: @nisse )
+
 
     if @comments.save
       redirect_to new_article_comment_path(@articles)
