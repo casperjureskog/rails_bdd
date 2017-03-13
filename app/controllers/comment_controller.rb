@@ -12,19 +12,17 @@ class CommentController < ApplicationController
 
   def create
 
-    @email = params[:comment][:email]
+      @email = params[:comment][:email]
 
-
-
-    email_test  = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
-  @email1 = (@email =~email_test)
+      email_test  = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
+      @email1 = (@email =~email_test)
 
    if @email1 == nil
       flash[:notice] = "Email is funky!!!!!"
       redirect_to new_article_comment_path(params[:format])
    else
-    @articles = Article.find(params[:format])
-    @comments = Comment.new(article: @articles, comment: params[:comment][:comment], :email => @email )
+      @articles = Article.find(params[:format])
+      @comments = Comment.new(article: @articles, comment: params[:comment][:comment], email: params[:comment][:email] )
 
    if @comments.save
       redirect_to new_article_comment_path(@articles)
