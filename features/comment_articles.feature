@@ -12,7 +12,7 @@ Feature: As a visitor
   Scenario:
     Given I am on the landing page
     And I click "A breaking news item"
-    And I fill in "Email" with "email"
+    And I fill in "Email" with "email@nisse.com"
     And I fill in "Comment" with "some thing"
     And I click "comment"
     Then I should see "some thing"

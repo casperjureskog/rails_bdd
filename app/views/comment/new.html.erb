@@ -3,7 +3,10 @@
     <li><%= @articles.content %></li>
 </ul>
 <h1>new test</h1>
-
+<% if flash[:notice] %>
+   <div class="notice"><%= flash[:notice] %></div>
+ <% end %>
+ <br>
 <%= form_for [ @articles , @comments ] do |f| %>
     <div>
       <%= f.label :email %>
@@ -23,6 +26,7 @@
   <h3>Comments</h3>
   <% @articles.comments.each do |content| %>
     <ul>
+      <li><%= content.email %></li>
       <li><%= content.comment %></li>
     </ul>
   <% end %>
