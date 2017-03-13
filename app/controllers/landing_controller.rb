@@ -11,16 +11,12 @@ class LandingController < ApplicationController
     @articles = Article.new
   end
 
-
-
   def create
     @articles = Article.new(articles_params)
     post.save
-
   end
 
-
-  private
+private
   def articles_params
     params.require(:articles).permit(:title, :content)
   end
