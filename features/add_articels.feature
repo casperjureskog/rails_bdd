@@ -7,6 +7,7 @@ Feature: As a writer
 
   Scenario:
     Given I visit the writer site
+    And I fill in "Author" with "author"
     And I fill in "Title" with "title"
     And I fill in "Content" with "content"
     And I click "add"

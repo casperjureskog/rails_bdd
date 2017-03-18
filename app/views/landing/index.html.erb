@@ -1,12 +1,18 @@
+<h2>Articles</h2>
 <ul>
   <% @articles.each do |article| %>
       <li>
-        <%= link_to article.title, new_article_comment_path(article)%><br />
+      <h3><%= link_to article.title, new_article_comment_path(article)%></h3>
       <li>
         <%= article.content %><br />
+      </li>
+      <li>
+      Written by <%= article.author  %> at <%= article.created_at.strftime('%Y-%m-%d') %><br />
       </li>
       </li>
   <% end %>
 </ul>
+<h4>List of authors</h4> <br>
+
 
 <%= link_to "Add Post" , new_post_path %>

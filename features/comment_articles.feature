@@ -3,10 +3,10 @@ Feature: As a visitor
   I need to have an comment input form.
 
   Background:
-    Given the following articles exists
-      | title                | content                            |
-      | A breaking news item | Some really breaking action        |
-      | Learn Rails 5        | Build awesome rails applications   |
+  Given the following articles exists
+    | title                | content                          | author |
+    | A breaking news item | Some really breaking action      | Thomas |
+    | Learn Rails 5        | Build awesome rails applications | Amber  |
 
 
   Scenario:

@@ -1,12 +1,12 @@
+<h2>Article</h2>
 <ul>
     <li><%= @articles.title %></li>
     <li><%= @articles.content %></li>
 </ul>
-<h1>new test</h1>
-<% if flash[:notice] %>
-   <div class="notice"><%= flash[:notice] %></div>
+<h3>Write comment</h3>
+<% if flash[:alert] %>
+   <div class="alert"><%= flash[:alert] %></div>
  <% end %>
- <br>
 <%= form_for [ @articles , @comments ] do |f| %>
     <div>
       <%= f.label :email %>

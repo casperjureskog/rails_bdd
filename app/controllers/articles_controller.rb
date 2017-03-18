@@ -14,13 +14,12 @@ class ArticlesController < ApplicationController
   def create
     @articles = Article.new article_params
     @articles.save
-
     redirect_to landing_index_path
   end
 
   private
 
   def article_params
-    params.require(:article).permit(:title, :content)
+    params.require(:article).permit(:title, :content, :author)
   end
 end
