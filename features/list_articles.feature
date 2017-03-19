@@ -13,7 +13,7 @@ Feature: List articles on landing page
     When I am on the landing page
     Then I should see "A breaking news item"
     And I should see "Some really breaking action"
-    And I should see "Written by Thomas at 2017-03-18"
+    And I should see "Written by Thomas at 2017-03-19"
     And I should see "Learn Rails 5"
     And I should see "Build awesome rails applications"
-    And I should see "Written by Amber at 2017-03-18"
+    And I should see "Written by Amber at 2017-03-19"

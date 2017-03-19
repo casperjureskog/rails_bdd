@@ -4,6 +4,6 @@ Feature: As a authors
 
   Scenario:
     Given I am on the landing page
-    Then I should see "List of authors"
-    And I click "Skriv Nisse"
+    Then I select "Thomas" from "Authors"
+    And I click "Chose"
     Then I should see "Skriv Nisses articles"

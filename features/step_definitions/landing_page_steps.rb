@@ -27,3 +27,7 @@ end
 Given(/^I click "([^"]*)"$/) do |button|
   click_link_or_button button
 end
+
+Then(/^I select "([^"]*)" from "([^"]*)"$/) do |option, select|
+  select option, from: select
+end
