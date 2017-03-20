@@ -3,4 +3,7 @@ class LandingController < ApplicationController
     @articles = Article.all
     @comments = Comment.select(article: @articles)
   end
+
+  def create
+  end
 end
