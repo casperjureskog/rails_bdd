@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'landing/index'
+  post '/articles' => 'articles#create'
+  get '/articles/new' => 'articles#new', as: 'new_post'
+  get '/articles/:id/show' => 'articles#show', as: 'new_show'
+  post '/article/comments' => 'comment#create'
+  resources :articles do
+    resources :comment
+  end
+  root controller: :landing, action: :index
 end

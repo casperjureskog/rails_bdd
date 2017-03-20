@@ -1,0 +1,11 @@
+<h2><%= params[:id] %> Articles<br /></h2>
+<ul>
+  <% Array(@article).each do |author| %>
+      <li>
+      <h3><%= author.title %></h3>
+      </li>
+      <li>
+        <%= author.content %><br />
+      </li>
+  <% end %>
+</ul>
